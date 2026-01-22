@@ -9,12 +9,12 @@ import java.util.ArrayList;
 public class ProcesadorPedidos {
  
  
-    public double procesar(ArrayList<String> listaNombres, ArrayList<Double> precios) {
+    public double procesar(ArrayList<String> Descuento, ArrayList<Double> precios) {
         double total = 0;
         
         // Sumar precios de la lista
         for (int i = 0; i < precios.size(); i++) {
-            System.out.println("Añadiendo producto: " + listaNombres.get(i));
+            System.out.println("Añadiendo producto: " + Descuento.get(i));
             total = total + precios.get(i);
         }
         
@@ -35,13 +35,13 @@ public class ProcesadorPedidos {
         return resultado;
     }
 
-	private double GastosEnvio(double resultado) {
-		resultado = resultado + 15.95;
-		return resultado;
+	private double GastosEnvio(double Gastos_envio) {
+		Gastos_envio = Gastos_envio + 15.95;
+		return Gastos_envio;
 	}
 
-	private double CalculoIVA(double total) {
-		double resultado = total + (total * 0.21);
+	private double CalculoIVA(double IVA) {
+		double resultado = IVA + (IVA * 0.21);
 		return resultado;
 	}
 }
