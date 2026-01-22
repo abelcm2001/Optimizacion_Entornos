@@ -25,13 +25,23 @@ public class ProcesadorPedidos {
         }
         
         // Cálculo de impuestos (Magic Number 0.21)
-        double resultado = total + (total * 0.21);
+        double resultado = CalculoIVA(total);
         
         // Gastos de envío (Magic Number 500 y 15.95)
         if (resultado < 500) {
-            resultado = resultado + 15.95;
+            resultado = GastosEnvio(resultado);
         }
         
         return resultado;
     }
+
+	private double GastosEnvio(double resultado) {
+		resultado = resultado + 15.95;
+		return resultado;
+	}
+
+	private double CalculoIVA(double total) {
+		double resultado = total + (total * 0.21);
+		return resultado;
+	}
 }
