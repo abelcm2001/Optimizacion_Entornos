@@ -22,5 +22,5 @@ jobs:
           cache: maven
 
       - name: Ejecutar Maven Clean y Test
-        working-directory: proyecto-factorizacion
+        working-directory: Trabajoproyecto
         run: mvn clean test
